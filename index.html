@@ -570,11 +570,9 @@ function render(){
   renderHistory();
 }
 function makeBubbles(){
-  const root=$("bubbles");
-  root.innerHTML="";
-
-  // Thí nghiệm 01c không hiển thị bong bóng.
-  if(exp==="c")return;
+  const root = $("bubbles");
+  root.innerHTML = "";
+}
 
   for(let i=0;i<7;i++){
     const b=document.createElement("span");
