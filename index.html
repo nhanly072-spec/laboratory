@@ -1,14 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng thí nghiệm Hóa học ảo - Thành Nhân</title>
+
 <style>
 :root {
-  --bg:#081321; --panel:#12253a; --panel2:#0b1a2a;
-  --border:#2a4962; --cyan:#65e4ff; --text:#edf7ff;
+  --bg:#081321;
+  --panel:#12253a;
+  --border:#2a4962;
+  --cyan:#65e4ff;
+  --text:#edf7ff;
   --muted:#91a9bf;
 }
 *{box-sizing:border-box}
@@ -21,7 +24,7 @@ button{font:inherit;cursor:pointer;transition:.2s}
 button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 header{
   display:flex;justify-content:space-between;align-items:center;gap:12px;
-  padding:18px 5%;background:#071321eF;border-bottom:1px solid #ffffff12;
+  padding:18px 5%;background:#071321ef;border-bottom:1px solid #ffffff12;
   position:sticky;top:0;z-index:5;backdrop-filter:blur(14px)
 }
 .brand{display:flex;align-items:center;gap:12px}
@@ -32,7 +35,10 @@ header{
 .brand h1{font-size:16px;margin:0;letter-spacing:1px}
 .brand p{font-size:11px;color:var(--muted);margin:5px 0 0}
 .live{font-size:11px;color:#8bf4bf;white-space:nowrap}
-.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#5be5a1;margin-right:7px}
+.dot{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:#5be5a1;margin-right:7px
+}
 main{max-width:1400px;margin:auto;padding:28px 24px}
 .intro{margin-bottom:23px}
 .eyebrow{color:var(--cyan);font-size:11px;letter-spacing:2px;font-weight:bold}
@@ -43,8 +49,13 @@ main{max-width:1400px;margin:auto;padding:28px 24px}
   padding:12px 16px;border:1px solid var(--border);border-radius:10px;
   color:#b6c9d9;background:#101e2d
 }
-.tab:hover,.tab.active{border-color:var(--cyan);background:linear-gradient(120deg,#126b91,#174a6c);color:white}
-.workspace{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(290px,.85fr);gap:19px}
+.tab:hover,.tab.active{
+  border-color:var(--cyan);
+  background:linear-gradient(120deg,#126b91,#174a6c);color:white
+}
+.workspace{
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(290px,.85fr);gap:19px
+}
 .panel{
   background:linear-gradient(145deg,#14263a,#0e1c2b);
   border:1px solid var(--border);border-radius:17px;overflow:hidden;
@@ -55,7 +66,10 @@ main{max-width:1400px;margin:auto;padding:28px 24px}
   padding:18px 20px;border-bottom:1px solid #ffffff10
 }
 .panel-head h3{font-size:14px;margin:0}
-.tag{font-size:10px;color:var(--cyan);border:1px solid #65e4ff44;padding:5px 8px;border-radius:6px}
+.tag{
+  font-size:10px;color:var(--cyan);border:1px solid #65e4ff44;
+  padding:5px 8px;border-radius:6px
+}
 .bench{
   position:relative;min-height:350px;padding:24px 12px 42px;overflow:hidden;
   background:radial-gradient(ellipse at 50% 70%,#1b537044,transparent 60%),
@@ -99,13 +113,6 @@ main{max-width:1400px;margin:auto;padding:28px 24px}
   box-shadow:0 -2px 12px #fff8;transition:height 1.2s ease,opacity 1s ease
 }
 @keyframes wave{to{transform:translateX(40%)}}
-@keyframes rise{to{transform:translateY(-150px);opacity:0}}
-.bubbles{position:absolute;inset:0;pointer-events:none}
-.bubble{
-  position:absolute;bottom:-10px;width:5px;height:5px;
-  border:1px solid #d8f8ff99;border-radius:50%;
-  animation:rise 2.8s linear infinite
-}
 .bottle{
   width:58px;height:90px;margin:0 auto 7px;position:relative;
   border:2px solid #8bb6cfaa;border-radius:8px 8px 12px 12px;
@@ -142,7 +149,9 @@ main{max-width:1400px;margin:auto;padding:28px 24px}
   border:1px solid #2c465d;background:#0b1928;border-radius:10px;
   padding:11px 8px;color:var(--text);min-width:0
 }
-.chem:hover:not(:disabled){border-color:var(--cyan);background:#142c40;transform:translateY(-2px)}
+.chem:hover:not(:disabled){
+  border-color:var(--cyan);background:#142c40;transform:translateY(-2px)
+}
 .chem:disabled{opacity:.35;cursor:not-allowed}
 .chem-icon{
   width:29px;height:38px;flex-shrink:0;border:1px solid #9ed9ef88;
@@ -163,7 +172,10 @@ main{max-width:1400px;margin:auto;padding:28px 24px}
 .btn:hover:not(:disabled){border-color:var(--cyan)}
 .btn:disabled{opacity:.35;cursor:not-allowed}
 .progress{height:4px;background:#22394d;border-radius:10px;overflow:hidden;margin-top:14px}
-.progress div{height:100%;width:0;background:linear-gradient(90deg,#1eb5e4,#8beaff);transition:width .3s}
+.progress div{
+  height:100%;width:0;background:linear-gradient(90deg,#1eb5e4,#8beaff);
+  transition:width .3s
+}
 .right-stack{display:flex;flex-direction:column;gap:19px}
 .content,.history{padding:19px}
 .status-chip{
@@ -178,10 +190,13 @@ main{max-width:1400px;margin:auto;padding:28px 24px}
 }
 .equation small{display:block;color:#829db2;margin-bottom:5px;font-size:10px}
 .history-list{display:flex;flex-direction:column;gap:12px}
-.history-item{display:flex;align-items:start;gap:10px;font-size:12px;color:#8fa8bd;line-height:1.5}
+.history-item{
+  display:flex;align-items:start;gap:10px;font-size:12px;
+  color:#8fa8bd;line-height:1.5
+}
 .history-num{
-  flex:0 0 23px;width:23px;height:23px;border-radius:7px;display:grid;place-items:center;
-  background:#1b3d54;color:#70dcf7;font-size:10px
+  flex:0 0 23px;width:23px;height:23px;border-radius:7px;
+  display:grid;place-items:center;background:#1b3d54;color:#70dcf7;font-size:10px
 }
 .history-item.current{color:#e4f6ff}
 .history-item.current .history-num{background:#087da5;color:white}
@@ -192,14 +207,20 @@ footer{
 }
 footer span{color:var(--cyan);font-weight:bold}
 @media(max-width:850px){
-  header{padding:15px 18px}main{padding:22px 13px}
-  .workspace{grid-template-columns:1fr}.bench{min-height:330px}
+  header{padding:15px 18px}
+  main{padding:22px 13px}
+  .workspace{grid-template-columns:1fr}
+  .bench{min-height:330px}
 }
 @media(max-width:430px){
-  .brand h1{font-size:12px}.brand p{font-size:9px}.live{font-size:9px}
-  .test-tube{width:79px;height:170px}.equipment{gap:13px}
+  .brand h1{font-size:12px}
+  .brand p{font-size:9px}
+  .live{font-size:9px}
+  .test-tube{width:79px;height:170px}
+  .equipment{gap:13px}
   .chem-list{grid-template-columns:1fr 1fr}
-  .chem{gap:6px;padding:9px 5px}.chem strong{font-size:10px}
+  .chem{gap:6px;padding:9px 5px}
+  .chem strong{font-size:10px}
 }
 </style>
 </head>
@@ -242,13 +263,12 @@ footer span{color:var(--cyan);font-weight:bold}
           <div class="vessel-wrap">
             <div class="vessel-name" id="vesselName">Ống nghiệm A</div>
             <div class="test-tube">
-              <div class="liquid" id="liquid">
-                <div class="bubbles" id="bubbles"></div>
-              </div>
+              <div class="liquid" id="liquid"></div>
               <div class="precipitate" id="solid"></div>
             </div>
             <div class="floor-label" id="vesselState">Chưa có hóa chất</div>
           </div>
+
           <div class="vessel-wrap">
             <div class="vessel-name">Hóa chất</div>
             <div class="bottle" id="bottle" style="--chem:#63d9ff99">
@@ -256,6 +276,7 @@ footer span{color:var(--cyan);font-weight:bold}
             </div>
             <div class="floor-label">Dung dịch</div>
           </div>
+
           <div class="vessel-wrap">
             <div class="vessel-name">Dụng cụ</div>
             <div class="pipette"></div>
@@ -301,7 +322,9 @@ footer span{color:var(--cyan);font-weight:bold}
           <h3>☷ Tiến trình thí nghiệm</h3>
           <span class="tag" id="stepCount">0 bước</span>
         </div>
-        <div class="history"><div class="history-list" id="historyList"></div></div>
+        <div class="history">
+          <div class="history-list" id="historyList"></div>
+        </div>
       </section>
     </div>
   </div>
@@ -314,7 +337,8 @@ const $ = id => document.getElementById(id);
 
 const configs = {
   a: {
-    title:"THÍ NGHIỆM 01a", name:"Ống nghiệm A", max:3,
+    title:"THÍ NGHIỆM 01a",
+    name:"Ống nghiệm A",
     chemicals:[
       {id:"naoh",name:"NaOH",desc:"Dung dịch kiềm",color:"#63d9ff"},
       {id:"pp",name:"Phenolphthalein (PP)",desc:"Chất chỉ thị",color:"#ff75b7"},
@@ -323,28 +347,34 @@ const configs = {
     initial:{
       chip:"SẴN SÀNG",
       text:"Bắt đầu với dung dịch NaOH, sau đó thêm PP và H₂SO₄.",
-      eq:"Chưa có phản ứng",label:"Chưa có hóa chất"
+      eq:"Chưa có phản ứng",
+      label:"Chưa có hóa chất"
     },
     stages:{
       1:{
         chip:"ĐÃ THÊM NaOH",
         text:"Dung dịch NaOH không màu, tạo môi trường kiềm.",
-        eq:"NaOH → Na⁺ + OH⁻",label:"Dung dịch NaOH"
+        eq:"NaOH → Na⁺ + OH⁻",
+        label:"Dung dịch NaOH"
       },
       2:{
         chip:"ĐÃ THÊM PP",
         text:"Dung dịch chuyển hồng vì phenolphthalein có màu hồng trong môi trường kiềm.",
-        eq:"Môi trường kiềm + PP → màu hồng",label:"Dung dịch màu hồng"
+        eq:"Môi trường kiềm + PP → màu hồng",
+        label:"Dung dịch màu hồng"
       },
       3:{
         chip:"ĐÃ THÊM H₂SO₄",
         text:"Khi thêm đủ axit để trung hòa lượng NaOH, màu hồng biến mất và dung dịch trở lại không màu.",
-        eq:"2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O",label:"Dung dịch không màu"
+        eq:"2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O",
+        label:"Dung dịch không màu"
       }
     }
   },
+
   b: {
-    title:"THÍ NGHIỆM 01b",name:"Ống nghiệm B",max:3,
+    title:"THÍ NGHIỆM 01b",
+    name:"Ống nghiệm B",
     chemicals:[
       {id:"mgso4",name:"MgSO₄",desc:"Dung dịch muối",color:"#7bdfff"},
       {id:"naoh",name:"NaOH",desc:"Dung dịch kiềm",color:"#63d9ff"},
@@ -352,34 +382,42 @@ const configs = {
       {id:"excess",name:"NaOH dư",desc:"Nhánh kiềm dư",color:"#63d9ff"}
     ],
     initial:{
-      chip:"SẴN SÀNG",text:"Thêm MgSO₄, sau đó thêm NaOH để tạo kết tủa.",
-      eq:"Chưa có phản ứng",label:"Chưa có hóa chất"
+      chip:"SẴN SÀNG",
+      text:"Thêm MgSO₄, sau đó thêm NaOH để tạo kết tủa.",
+      eq:"Chưa có phản ứng",
+      label:"Chưa có hóa chất"
     },
     stages:{
       1:{
         chip:"ĐÃ THÊM MgSO₄",
         text:"Dung dịch MgSO₄ trong suốt, chưa có kết tủa.",
-        eq:"MgSO₄ → Mg²⁺ + SO₄²⁻",label:"Dung dịch trong suốt"
+        eq:"MgSO₄ → Mg²⁺ + SO₄²⁻",
+        label:"Dung dịch trong suốt"
       },
       2:{
         chip:"KẾT TỦA TRẮNG",
         text:"Xuất hiện kết tủa trắng Mg(OH)₂. Chọn nhánh axit hoặc nhánh kiềm dư.",
-        eq:"MgSO₄ + 2NaOH → Mg(OH)₂↓ + Na₂SO₄",label:"Có kết tủa trắng"
+        eq:"MgSO₄ + 2NaOH → Mg(OH)₂↓ + Na₂SO₄",
+        label:"Có kết tủa trắng"
       },
       3:{
         chip:"NHÁNH A · AXIT",
         text:"Thêm H₂SO₄: kết tủa Mg(OH)₂ tan, tạo muối và nước.",
-        eq:"Mg(OH)₂ + H₂SO₄ → MgSO₄ + 2H₂O",label:"Kết tủa đã tan"
+        eq:"Mg(OH)₂ + H₂SO₄ → MgSO₄ + 2H₂O",
+        label:"Kết tủa đã tan"
       },
       4:{
         chip:"NHÁNH B · KIỀM DƯ",
         text:"Thêm NaOH dư: kết tủa Mg(OH)₂ vẫn còn trong điều kiện dung dịch thông thường.",
-        eq:"Mg²⁺ + 2OH⁻ → Mg(OH)₂↓",label:"Kết tủa vẫn còn"
+        eq:"Mg²⁺ + 2OH⁻ → Mg(OH)₂↓",
+        label:"Kết tủa vẫn còn"
       }
     }
   },
+
   c: {
-    title:"THÍ NGHIỆM 01c",name:"Ống nghiệm C",max:3,
+    title:"THÍ NGHIỆM 01c",
+    name:"Ống nghiệm C",
     chemicals:[
       {id:"al",name:"Al₂(SO₄)₃",desc:"Muối nhôm",color:"#7bdfff"},
       {id:"naoh",name:"NaOH",desc:"Dung dịch kiềm",color:"#63d9ff"},
@@ -387,227 +425,325 @@ const configs = {
       {id:"excess",name:"NaOH dư",desc:"Nhánh kiềm dư",color:"#63d9ff"}
     ],
     initial:{
-      chip:"SẴN SÀNG",text:"Thêm Al₂(SO₄)₃, sau đó thêm NaOH.",
-      eq:"Chưa có phản ứng",label:"Chưa có hóa chất"
+      chip:"SẴN SÀNG",
+      text:"Thêm Al₂(SO₄)₃, sau đó thêm NaOH.",
+      eq:"Chưa có phản ứng",
+      label:"Chưa có hóa chất"
     },
     stages:{
       1:{
         chip:"ĐÃ THÊM MUỐI NHÔM",
         text:"Dung dịch Al₂(SO₄)₃ trong suốt.",
-        eq:"Al₂(SO₄)₃ → 2Al³⁺ + 3SO₄²⁻",label:"Dung dịch trong suốt"
+        eq:"Al₂(SO₄)₃ → 2Al³⁺ + 3SO₄²⁻",
+        label:"Dung dịch trong suốt"
       },
       2:{
         chip:"KẾT TỦA TRẮNG",
         text:"Xuất hiện kết tủa keo trắng Al(OH)₃. Chọn một nhánh để tiếp tục.",
-        eq:"Al₂(SO₄)₃ + 6NaOH → 2Al(OH)₃↓ + 3Na₂SO₄",label:"Có kết tủa trắng"
+        eq:"Al₂(SO₄)₃ + 6NaOH → 2Al(OH)₃↓ + 3Na₂SO₄",
+        label:"Có kết tủa trắng"
       },
       3:{
         chip:"NHÁNH A · AXIT",
         text:"Thêm H₂SO₄ vừa đủ: kết tủa Al(OH)₃ tan, tạo dung dịch muối nhôm.",
-        eq:"2Al(OH)₃ + 3H₂SO₄ → Al₂(SO₄)₃ + 6H₂O",label:"Kết tủa đã tan"
+        eq:"2Al(OH)₃ + 3H₂SO₄ → Al₂(SO₄)₃ + 6H₂O",
+        label:"Kết tủa đã tan"
       },
       4:{
         chip:"NHÁNH B · KIỀM DƯ",
         text:"Thêm NaOH dư: kết tủa Al(OH)₃ tan do tính lưỡng tính, tạo ion aluminat trong dung dịch.",
-        eq:"Al(OH)₃ + NaOH → Na[Al(OH)₄]",label:"Kết tủa đã tan"
+        eq:"Al(OH)₃ + NaOH → Na[Al(OH)₄]",
+        label:"Kết tủa đã tan"
       }
     }
   }
 };
 
-let exp="a", step=0, branch=null, soundOn=true;
-let history=[];
-let observations=[];
-let visual={liquid:0,pink:false,solid:0,label:"Chưa có hóa chất"};
+let exp = "a";
+let step = 0;
+let branch = null;
+let soundOn = true;
+let history = [];
+let observations = [];
+let visual = {
+  liquid:0,
+  pink:false,
+  solid:0,
+  label:"Chưa có hóa chất"
+};
 
 function currentData(){
-  return step===0 ? configs[exp].initial : configs[exp].stages[step];
+  return step === 0 ? configs[exp].initial : configs[exp].stages[step];
 }
+
 function canAdd(id){
-  if(exp==="a"){
-    return (id==="naoh"&&step===0)||
-           (id==="pp"&&step===1)||
-           (id==="acid"&&step===2);
+  if(exp === "a"){
+    return (id === "naoh" && step === 0) ||
+           (id === "pp" && step === 1) ||
+           (id === "acid" && step === 2);
   }
-  const startId=exp==="b"?"mgso4":"al";
-  if(id===startId&&step===0)return true;
-  if(id==="naoh"&&step===1)return true;
-  if((id==="acid"||id==="excess")&&step===2&&!branch)return true;
+
+  const startId = exp === "b" ? "mgso4" : "al";
+
+  if(id === startId && step === 0) return true;
+  if(id === "naoh" && step === 1) return true;
+
+  if((id === "acid" || id === "excess") && step === 2 && !branch){
+    return true;
+  }
+
   return false;
 }
+
 function saveSnapshot(){
   history.push({
-    exp,step,branch,observations:[...observations],visual:{...visual}
+    exp,
+    step,
+    branch,
+    observations:[...observations],
+    visual:{...visual}
   });
 }
-function playSound(freq=650){
-  if(!soundOn)return;
+
+function playSound(freq = 650){
+  if(!soundOn) return;
+
   try{
-    const Ctx=window.AudioContext||window.webkitAudioContext;
-    const ctx=new Ctx(),osc=ctx.createOscillator(),gain=ctx.createGain();
-    osc.type="sine";osc.frequency.value=freq;gain.gain.value=.035;
-    osc.connect(gain);gain.connect(ctx.destination);osc.start();
-    gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.15);
-    osc.stop(ctx.currentTime+.15);osc.onended=()=>ctx.close();
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    const ctx = new Ctx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = "sine";
+    osc.frequency.value = freq;
+    gain.gain.value = .035;
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+
+    gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime + .15);
+    osc.stop(ctx.currentTime + .15);
+    osc.onended = () => ctx.close();
   }catch(e){}
 }
+
 function addChemical(id){
-  if(!canAdd(id))return;
+  if(!canAdd(id)) return;
+
   saveSnapshot();
 
-  if(exp==="a"){
-    if(id==="naoh"){
-      step=1;visual.liquid=57;visual.pink=false;
-      visual.label="Dung dịch NaOH";observations.push("Thêm NaOH");playSound(520);
-    }else if(id==="pp"){
-      step=2;visual.pink=true;visual.label="Dung dịch màu hồng";
-      observations.push("Thêm phenolphthalein — dung dịch chuyển hồng");playSound(720);
-    }else if(id==="acid"){
-      step=3;visual.pink=false;visual.label="Dung dịch không màu";
-      observations.push("Thêm H₂SO₄ — màu hồng biến mất khi đủ axit");playSound(850);
+  if(exp === "a"){
+    if(id === "naoh"){
+      step = 1;
+      visual.liquid = 57;
+      visual.pink = false;
+      visual.label = "Dung dịch NaOH";
+      observations.push("Thêm NaOH");
+      playSound(520);
+
+    }else if(id === "pp"){
+      step = 2;
+      visual.pink = true;
+      visual.label = "Dung dịch màu hồng";
+      observations.push("Thêm phenolphthalein — dung dịch chuyển hồng");
+      playSound(720);
+
+    }else if(id === "acid"){
+      step = 3;
+      visual.pink = false;
+      visual.label = "Dung dịch không màu";
+      observations.push("Thêm H₂SO₄ — màu hồng biến mất khi đủ axit");
+      playSound(850);
     }
+
   }else{
-    const startId=exp==="b"?"mgso4":"al";
-    const saltName=exp==="b"?"MgSO₄":"Al₂(SO₄)₃";
-    const hydroxide=exp==="b"?"Mg(OH)₂":"Al(OH)₃";
+    const startId = exp === "b" ? "mgso4" : "al";
+    const saltName = exp === "b" ? "MgSO₄" : "Al₂(SO₄)₃";
+    const hydroxide = exp === "b" ? "Mg(OH)₂" : "Al(OH)₃";
 
-    if(id===startId){
-      step=1;visual.liquid=57;visual.label="Dung dịch trong suốt";
-      observations.push("Thêm "+saltName);playSound(520);
-    }else if(id==="naoh"&&step===1){
-      step=2;visual.solid=exp==="b"?23:27;visual.label="Có kết tủa trắng";
-      observations.push("Thêm NaOH — xuất hiện kết tủa trắng "+hydroxide);playSound(740);
-    }else if(id==="acid"&&step===2){
-      branch="acid";step=3;visual.solid=0;visual.label="Kết tủa đã tan";
-      observations.push("Nhánh A: thêm H₂SO₄ — kết tủa tan");playSound(850);
-    }else if(id==="excess"&&step===2){
-      branch="base";step=4;
+    if(id === startId){
+      step = 1;
+      visual.liquid = 57;
+      visual.label = "Dung dịch trong suốt";
+      observations.push("Thêm " + saltName);
+      playSound(520);
 
-      if(exp==="b"){
-        visual.solid=23;
-        visual.label="Kết tủa vẫn còn";
+    }else if(id === "naoh" && step === 1){
+      step = 2;
+      visual.solid = exp === "b" ? 23 : 27;
+      visual.label = "Có kết tủa trắng";
+      observations.push("Thêm NaOH — xuất hiện kết tủa trắng " + hydroxide);
+      playSound(740);
+
+    }else if(id === "acid" && step === 2){
+      branch = "acid";
+      step = 3;
+      visual.solid = 0;
+      visual.label = "Kết tủa đã tan";
+      observations.push("Nhánh A: thêm H₂SO₄ — kết tủa tan");
+      playSound(850);
+
+    }else if(id === "excess" && step === 2){
+      branch = "base";
+      step = 4;
+
+      if(exp === "b"){
+        visual.solid = 23;
+        visual.label = "Kết tủa vẫn còn";
         observations.push("Nhánh B: NaOH dư — kết tủa vẫn còn");
       }else{
-        // 01c: Al(OH)3 tan trong NaOH dư, không có khí sinh ra.
-        visual.solid=0;
-        visual.label="Kết tủa tan dần";
+        visual.solid = 0;
+        visual.label = "Kết tủa tan dần";
         observations.push("Nhánh B: thêm NaOH dư — kết tủa Al(OH)₃ tan dần, không có khí thoát ra");
       }
+
       playSound(460);
     }
   }
 
   render();
 }
+
 function renderChemicals(){
-  const list=$("chemList");
-  list.innerHTML="";
-  configs[exp].chemicals.forEach(c=>{
-    const btn=document.createElement("button");
-    btn.className="chem";
-    btn.disabled=!canAdd(c.id);
-    btn.innerHTML=
-      '<span class="chem-icon" style="--chem:'+c.color+'99"></span>'+
-      '<span><strong>'+c.name+'</strong><small>'+c.desc+'</small></span>';
-    btn.onclick=()=>addChemical(c.id);
+  const list = $("chemList");
+  list.innerHTML = "";
+
+  configs[exp].chemicals.forEach(c => {
+    const btn = document.createElement("button");
+    btn.className = "chem";
+    btn.disabled = !canAdd(c.id);
+
+    btn.innerHTML =
+      '<span class="chem-icon" style="--chem:' + c.color + '99"></span>' +
+      '<span><strong>' + c.name + '</strong><small>' + c.desc + '</small></span>';
+
+    btn.onclick = () => addChemical(c.id);
     list.appendChild(btn);
   });
 }
+
 function renderHistory(){
-  const list=$("historyList");
-  list.innerHTML="";
+  const list = $("historyList");
+  list.innerHTML = "";
+
   if(!observations.length){
-    list.innerHTML='<div class="history-item"><div class="history-num">—</div><div>Chưa thực hiện bước nào.</div></div>';
+    list.innerHTML =
+      '<div class="history-item"><div class="history-num">—</div><div>Chưa thực hiện bước nào.</div></div>';
     return;
   }
-  observations.forEach((item,i)=>{
-    const row=document.createElement("div");
-    row.className="history-item"+(i===observations.length-1?" current":"");
-    const n=document.createElement("div");
-    n.className="history-num";n.textContent=i+1;
-    const t=document.createElement("div");t.textContent=item;
-    row.append(n,t);list.appendChild(row);
+
+  observations.forEach((item,i) => {
+    const row = document.createElement("div");
+    row.className = "history-item" +
+      (i === observations.length - 1 ? " current" : "");
+
+    const n = document.createElement("div");
+    n.className = "history-num";
+    n.textContent = i + 1;
+
+    const t = document.createElement("div");
+    t.textContent = item;
+
+    row.append(n,t);
+    list.appendChild(row);
   });
 }
+
 function render(){
-  const data=currentData();
-  $("liquid").style.height=visual.liquid+"%";
+  const data = currentData();
+
+  $("liquid").style.height = visual.liquid + "%";
   $("liquid").classList.toggle("pink",visual.pink);
-  $("solid").style.height=visual.solid+"%";
-  $("solid").style.opacity=visual.solid?"1":"0";
-  $("vesselState").textContent=visual.label;
-  $("observation").textContent=data.text;
-  $("equation").textContent=data.eq;
-  $("statusChip").textContent="BƯỚC "+step;
-  $("stateTag").textContent=data.chip;
-  $("expTag").textContent=configs[exp].title;
-  $("vesselName").textContent=configs[exp].name;
-  $("stepCount").textContent=observations.length+" bước";
-  $("progressBar").style.width=(step/3*100)+"%";
-  $("tab-a").classList.toggle("active",exp==="a");
-  $("tab-b").classList.toggle("active",exp==="b");
-  $("tab-c").classList.toggle("active",exp==="c");
+  $("solid").style.height = visual.solid + "%";
+  $("solid").style.opacity = visual.solid ? "1" : "0";
+  $("vesselState").textContent = visual.label;
+  $("observation").textContent = data.text;
+  $("equation").textContent = data.eq;
+  $("statusChip").textContent = "BƯỚC " + step;
+  $("stateTag").textContent = data.chip;
+  $("expTag").textContent = configs[exp].title;
+  $("vesselName").textContent = configs[exp].name;
+  $("stepCount").textContent = observations.length + " bước";
+  $("progressBar").style.width = (step / 3 * 100) + "%";
 
-  const last=observations[observations.length-1]||"";
-  $("bottleLabel").textContent=last.includes("H₂SO₄")?"H₂SO₄":
-    last.includes("PP")||last.includes("phenolphthalein")?"PP":
-    last.includes("Al₂(SO₄)₃")?"Al₂(SO₄)₃":
-    last.includes("MgSO₄")?"MgSO₄":"NaOH";
+  $("tab-a").classList.toggle("active",exp === "a");
+  $("tab-b").classList.toggle("active",exp === "b");
+  $("tab-c").classList.toggle("active",exp === "c");
 
-  if(exp==="a"){
-    $("reagentHint").textContent=step===0?"Bắt đầu bằng NaOH → PP → H₂SO₄.":
-      step===1?"Tiếp theo, thêm phenolphthalein (PP).":
-      step===2?"Tiếp theo, thêm H₂SO₄ để trung hòa dung dịch kiềm.":
+  const last = observations[observations.length - 1] || "";
+
+  $("bottleLabel").textContent =
+    last.includes("H₂SO₄") ? "H₂SO₄" :
+    last.includes("PP") || last.includes("phenolphthalein") ? "PP" :
+    last.includes("Al₂(SO₄)₃") ? "Al₂(SO₄)₃" :
+    last.includes("MgSO₄") ? "MgSO₄" : "NaOH";
+
+  if(exp === "a"){
+    $("reagentHint").textContent =
+      step === 0 ? "Bắt đầu bằng NaOH → PP → H₂SO₄." :
+      step === 1 ? "Tiếp theo, thêm phenolphthalein (PP)." :
+      step === 2 ? "Tiếp theo, thêm H₂SO₄ để trung hòa dung dịch kiềm." :
       "Hoàn thành! Quay lại để xem bước trước hoặc làm lại.";
   }else{
-    $("reagentHint").textContent=step===0?"Bắt đầu bằng dung dịch muối.":
-      step===1?"Thêm NaOH để tạo kết tủa.":
-      step===2?"Chọn H₂SO₄ hoặc NaOH dư để thử một nhánh riêng.":
+    $("reagentHint").textContent =
+      step === 0 ? "Bắt đầu bằng dung dịch muối." :
+      step === 1 ? "Thêm NaOH để tạo kết tủa." :
+      step === 2 ? "Chọn H₂SO₄ hoặc NaOH dư để thử một nhánh riêng." :
       "Hoàn thành nhánh này. Bấm Quay lại để chọn nhánh còn lại.";
   }
 
   renderChemicals();
   renderHistory();
 }
-function makeBubbles(){
-  const root = $("bubbles");
-  root.innerHTML = "";
-}
 
-  for(let i=0;i<7;i++){
-    const b=document.createElement("span");
-    b.className="bubble";
-    b.style.left=(10+Math.random()*75)+"%";
-    b.style.animationDelay=(Math.random()*2.5)+"s";
-    root.appendChild(b);
-  }
-}
 function switchExperiment(which){
-  exp=which;step=0;branch=null;history=[];observations=[];
-  visual={liquid:0,pink:false,solid:0,label:"Chưa có hóa chất"};
-  makeBubbles();
+  exp = which;
+  step = 0;
+  branch = null;
+  history = [];
+  observations = [];
+  visual = {
+    liquid:0,
+    pink:false,
+    solid:0,
+    label:"Chưa có hóa chất"
+  };
+
   render();
   playSound(600);
 }
+
 function undo(){
   if(!history.length){
-    $("observation").textContent="Đang ở bước đầu tiên. Không còn bước nào để quay lại.";
+    $("observation").textContent =
+      "Đang ở bước đầu tiên. Không còn bước nào để quay lại.";
     return;
   }
-  const old=history.pop();
-  exp=old.exp;step=old.step;branch=old.branch;
-  observations=old.observations;visual=old.visual;
-  makeBubbles();
+
+  const old = history.pop();
+  exp = old.exp;
+  step = old.step;
+  branch = old.branch;
+  observations = old.observations;
+  visual = old.visual;
+
   render();
   playSound(400);
 }
-function resetExperiment(){switchExperiment(exp)}
-function toggleSound(){
-  soundOn=!soundOn;
-  $("soundButton").textContent=soundOn?"♫ Âm thanh: Bật":"♫ Âm thanh: Tắt";
-  if(soundOn)playSound();
+
+function resetExperiment(){
+  switchExperiment(exp);
 }
-makeBubbles();
+
+function toggleSound(){
+  soundOn = !soundOn;
+  $("soundButton").textContent =
+    soundOn ? "♫ Âm thanh: Bật" : "♫ Âm thanh: Tắt";
+
+  if(soundOn) playSound();
+}
+
 render();
 </script>
 </body>
